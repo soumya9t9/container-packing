@@ -1,0 +1,10 @@
+<div>
+    <button [disabled]="containerIndex <1" (click)="changeContainer(-1)">Previous Container</button>
+    <button [disabled]="(!containerLists) || (containerIndex >= (containerLists?.length || -1) - 1)" (click)="changeContainer(1)">Next Container</button>
+</div>
+
+<div>
+    <button [disabled]="!AreItemsPacked()" (click)="UnpackItemInRender()">Previous</button>
+    <button [disabled]="AreAllItemsPacked()" (click)="PackItemInRender()">Next</button>
+</div>
+<div id="drawing-container" style="margin-top: 30px; text-align: center;"></div>
